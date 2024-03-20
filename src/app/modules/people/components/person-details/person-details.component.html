@@ -1,0 +1,59 @@
+<div class="container-fluid" style="padding-top: 20px">
+  <div class="card bg-light" *ngIf="person">
+    <div class="card-body">
+      <h5 class="card-title">Person Details</h5>
+      <h6 class="card-subtitle mb-2 text-muted">
+        First Name: {{ person.givenName }}
+      </h6>
+      <h6 class="card-subtitle mb-2 text-muted">
+        Last Name: {{ person.lastName }}
+      </h6>
+      <hr />
+      <h5 class="card-title">Additional information about the given person:</h5>
+      <p class="card-text">
+        Date Of Birth: {{ person.dateOfBirth }}<br />
+        Place Of Birth: {{ person.placeOfBirth }}<br />
+      </p>
+    </div>
+  </div>
+  <br />
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <button ngbNavLink>Contact Methods</button>
+      <ng-template ngbNavContent>
+        <div class="d-flex justify-content-end mb-3">
+          <button
+            class="btn btn-success btn-sm"
+            (click)="openContactMethodModal(personId)"
+          > <i class="fas fa-plus"></i>
+            Add New Contact
+          </button>
+        </div>
+        <app-contact-method-tabs
+          [contactMethods]="person?.contactMethods"
+        ></app-contact-method-tabs>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <button ngbNavLink>Postal Addresses</button>
+      <ng-template ngbNavContent>
+        <div class="d-flex justify-content-end mb-3">
+          <button
+            class="btn btn-success btn-sm"
+            (click)="openPostalAddressModal(personId)"
+          > <i class="fas fa-plus"></i>
+            Add New Postal Address
+          </button>
+        </div>
+        <app-address-tabs
+          [postalAddresses]="person?.postalAddresses ?? []"
+          [personId]="personId"
+        ></app-address-tabs>
+      </ng-template>
+    </li>
+  </ul>
+
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+  <pre>Active: {{ active }}</pre>
+</div>

@@ -1,0 +1,29 @@
+<div *ngIf="hasPostalAddresses()">
+    <table class="table table table-bordered">
+        <thead>
+          <tr>
+            <th>Street Address</th>
+            <th>City</th>
+            <th>Zip</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let postalAddress of postalAddresses">
+            <td>{{ postalAddress.streetAddress }}</td>
+            <td>{{ postalAddress.city }}</td>
+            <td>{{ postalAddress.zip }}</td>
+            <td>{{ postalAddress.country }}</td>
+            <td>
+                <button class="btn btn-sm btn-primary edit-button" (click)="openEditPostalAddressModal(true, postalAddress)"> 
+                  <i class="fas fa-edit"></i> Edit</button>
+                <button class="btn btn-sm btn-danger" (click)="postalAddress.id && openDeletePostalAddressModal(postalAddress.id)">
+                  <i class="fas fa-trash-alt"></i> Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<div *ngIf="!hasPostalAddresses()"> 
+        No postal addresses available.
+</div>

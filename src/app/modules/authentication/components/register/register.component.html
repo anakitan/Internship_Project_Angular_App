@@ -1,0 +1,56 @@
+<div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Register</h4>
+          </div>
+          <div class="card-body">
+            <form (submit)="onSubmit($event)">
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" [(ngModel)]="user.username" name="username" required placeholder="Enter username">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password" required placeholder="Enter password">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Role</label><br />
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="ROLE_USER"
+                    [(ngModel)]="isUser"
+                    value="USER"
+                    name="role"
+                    
+                  />
+                  <label class="form-check-label" for="ROLE_USER"
+                    >ROLE USER</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="ROLE_ADMIN"
+                    [(ngModel)]="isAdmin"
+                    value="ADMIN"
+                    name="role"
+                  />
+                  <label class="form-check-label" for="ROLE_ADMIN">ROLE ADMIN</label>
+                </div>
+              </div>
+              <div class="d-grid gap-2 mb-3">
+                <button type="submit" class="btn btn-primary">Register</button>
+              </div>
+            </form>
+            <hr>
+            <p class="text-center">Already have an account? <a href="/login" routerLinkActive="active" class="text-decoration-none">Login here</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,135 @@
+ /* .header {
+    height: 120px;
+    background-color: #eae2ec;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .logo img {
+    height: 60px; 
+    width: 190px;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+  
+  .button-container {
+    display: flex;
+  }
+  
+  .button-container button {
+    margin-left: 10px;
+  }
+  
+  .container {
+    display: flex;
+  }
+
+  .main {
+    flex: 1;
+    padding: 20px;
+    margin-left: 200px; 
+    margin-bottom: 90px; 
+  }
+
+  .main-content {
+    width: auto;
+    margin-left: 250px;
+    margin-top: 40px;
+    height: 1400px;
+    width: 1200px;
+  }
+
+  .button-container .header-button {
+    padding: 5px 8px; 
+    font-size: 24px; 
+    border: none;
+    background-color: #053245;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 15px; 
+    border-radius: 10%;
+  }
+  
+  .button-container .header-button:hover {
+    background-color: #8fa9b4; 
+  } 
+
+  .sidebar {
+    background-color: rgba(119, 98, 121, 0.651);
+    width: 200px; 
+    padding: 20px;
+    position: absolute; 
+    top: 5; 
+    bottom: 50; 
+    left: 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 1500px;
+    top: 120px;
+    bottom: 90px;
+    left: 0;
+    overflow-y: auto;
+  }
+  
+  .sidebar-link {
+    color: #0c3547;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 15px; 
+    padding-top: 20px;
+    font-weight: bold;
+  }
+  
+  .sidebar-link:hover {
+    color: rgb(214, 214, 233);
+  }
+
+  footer {
+    background-color: #eae2ec;
+    color: #fff;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    border-top: 2px solid #ccc;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-content p{
+    font-size: 18px;
+    color: black;
+  }
+
+  .dropdown button{
+    background-color: #8b8484;
+    height: auto;
+    width: auto;
+  }  */
+
+  .col-md-2.position-fixed {
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+  .col-md-10.offset-md-2 {
+    margin-left: 16.66666667%;
+  }
+
+  

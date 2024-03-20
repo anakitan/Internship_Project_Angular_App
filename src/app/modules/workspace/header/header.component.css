@@ -1,0 +1,33 @@
+button {
+    margin-right: 15px;
+  }
+
+.nav{
+    height: 60px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.styled-btn {
+    background-color: #143467;
+    border: none;
+    color: white;
+    padding: 10px 17px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.styled-btn:hover {
+    background-color: #4d76b8;
+}
+
+.bg-custom-color {
+    background-color: rgba(209, 204, 209, 0.814);
+}

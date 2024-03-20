@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-6">
+          <div class="d-flex align-items-center mb-3">
+              <h4 class="me-3 custom-title">Case Files List</h4>
+              <button class="btn btn-success ms-auto" (click)="openCaseFileModal()"> <i class="fas fa-plus"></i> Add New Case File</button>
+          </div>
+          <div> 
+              <ul class="list-group w-100"> 
+                  <ng-container *ngFor="let cf of caseFiles">
+                      <ng-container *ngIf="cf.title">
+                          <li class="list-group-item list-group-item-action" 
+                              (click)="showDetails(cf.id)" 
+                              [class.active]="cf.id === selectedCaseFile?.id"
+                              (click)="handleClick(cf)"
+                              [class.clicked]="cf === clickedItem"
+                              >
+                              <div class="d-flex justify-content-between align-items-center">
+                                  <span>{{ cf.title}}</span>
+                              </div>
+                          </li>
+                      </ng-container>
+                  </ng-container>
+              </ul>
+          </div>
+      </div>
+      <div class="col-md-6">
+          <!-- <app-person-details [person]="selectedPerson"></app-person-details> -->
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+</div>

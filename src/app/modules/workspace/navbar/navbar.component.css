@@ -1,0 +1,39 @@
+.bi {
+  vertical-align: -.125em;
+  pointer-events: none;
+  fill: currentColor;
+}
+
+.dropdown-toggle { outline: 0; }
+
+.nav-flush .nav-link {
+  border-radius: 0;
+}
+
+.nav-link {
+  color: #143467;
+  font-weight: bold;
+}
+
+.nav-link.active {
+  color: white;
+  background-color: #7a6878;
+}
+
+.nav-link:hover {
+    background-color: #d4cfd4; 
+  }
+
+.bg-custom-color {
+    background-color: rgba(188, 178, 188, 0.853) !important;
+}
+
+.custom-navbar {
+    height: 720px;
+    position: absolute;
+    overflow-y: auto;
+}
+
+img {
+  margin-left: 20px;
+}

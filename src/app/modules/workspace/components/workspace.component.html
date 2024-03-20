@@ -1,0 +1,53 @@
+<!-- <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<header class="header">
+    <div class="logo">
+      <img src="..\..\assets\images\logo-removebg-preview.png" alt="Logo">
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Logged in user
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Logout</a>
+        <a class="dropdown-item" href="#">Profile</a>
+      </div>
+    </div>
+</header> 
+
+<body>
+<nav class="sidebar">
+    <a routerLink="/home" routerLinkActive="active" class="sidebar-link">Home</a>
+    <a routerLink="/cases" routerLinkActive="active" class="sidebar-link">Case Files</a>
+    <a routerLink="/people" routerLinkActive="active"  class="sidebar-link">People</a>
+</nav>
+
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </div>
+</footer>
+</body> -->
+
+<div>
+  <app-header></app-header>
+  <div class="row" style="margin-top: 20px; margin-left: 10px;">
+    <div class="col-xs-2 col-md-2 position-fixed">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="col-xs-2 col-md-10 offset-md-2">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <br>
+  <app-footer></app-footer>
+</div>

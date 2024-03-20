@@ -1,0 +1,30 @@
+<div class="modal-header">
+    <h4 class="modal-title">Add Contact Method</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+
+<div class="modal-body">
+    <form (ngSubmit)="addContactMethod()">
+      <div class="mb-3">
+        <label class="form-label">Contact Method Type</label><br />
+        <select class="form-select" [(ngModel)]="selectedType" name="type">
+          <option value="EMAIL">Email</option>
+          <option value="PHONE">Phone</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="value" class="form-label">Value</label>
+        <input type="text" class="form-control" id="value" name="value" placeholder="Enter email or phone" [(ngModel)]="value">
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input type="text" class="form-control" id="description" name="description" placeholder="Enter description" [(ngModel)]="description">
+      </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="addContactMethod()">Save</button>
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>
+

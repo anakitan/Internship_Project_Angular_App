@@ -1,0 +1,15 @@
+.welcome-container {
+    text-align: center; 
+    margin-top: 0px; 
+    font-size: 40px;
+    color:#143467;
+    text-align: center;
+}
+
+.welcome-container p:first-child {
+    font-weight: bold;
+}
+
+.smaller-font {
+    font-size: 15px;
+}

@@ -1,0 +1,19 @@
+<div class="container-fluid" style="padding-top: 20px">
+  <div class="card bg-light" *ngIf="caseFile">
+    <div class="card-body">
+      <h5 class="card-title">Case File Details</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Title: {{ caseFile.title }}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">Case Number: {{ caseFile.caseNumber }}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">Incident Date: {{ caseFile.incidentDate }}</h6>
+      <hr>
+      <h5 class="card-title">Person Details For The Given Case File: </h5>
+      <p class="card-text">
+        First Name: {{ caseFile.person?.givenName }}<br>
+        Last Name: {{ caseFile.person?.lastName }}<br>
+        Date Of Birth: {{ caseFile.person?.dateOfBirth }}<br>
+        Place Of Birth: {{ caseFile.person?.placeOfBirth }}<br>
+      </p>
+    </div>
+  </div>
+  <br>
+</div>  

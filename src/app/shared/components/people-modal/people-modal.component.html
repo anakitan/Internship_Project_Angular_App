@@ -1,0 +1,30 @@
+<div class="modal-header">
+    <h4 class="modal-title">Add New Person</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+
+<div class="modal-body">
+    <form (ngSubmit)="addPerson()">
+      <div class="mb-3">
+        <label for="givenName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="givenName" name="givenName" placeholder="Enter first name" [(ngModel)]="givenName">
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name" [(ngModel)]="lastName">
+      </div>
+      <div class="mb-3">
+        <label for="dateOfBirth" class="form-label">Date of Birth</label>
+        <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" placeholder="Enter date of birth" [(ngModel)]="dateOfBirth">
+      </div>
+      <div class="mb-3">
+        <label for="placeOfBirth" class="form-label">Place of Birth</label>
+        <input type="text" class="form-control" id="placeOfBirth" name="placeOfBirth" [(ngModel)]="placeOfBirth">
+      </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="addPerson()">Save</button>
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.dismiss('Close click')">Close</button>
+</div>
